@@ -1,6 +1,6 @@
-import { call, put, takeLatest } from "redux-saga/effects"
+import { call, put } from "redux-saga/effects"
 import { AxiosResponse } from 'axios'
-import { getCatSagaFulfilled, getCatLoading, getCatRejected, getCatSaga } from '../../features/cat/catSlice'
+import { getCatSagaFulfilled, getCatLoading, getCatRejected } from '../../features/cat/catSlice'
 import { getCat } from '../../api/cat'
 
 export function* handleGetCat() {
@@ -13,8 +13,4 @@ export function* handleGetCat() {
         console.log(error)
         yield put(getCatRejected())
     }
-}
-
-export function* watcherSaga() {
-    yield takeLatest(getCatSaga.type, handleGetCat)
 }

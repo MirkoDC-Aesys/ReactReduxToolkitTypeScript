@@ -2,7 +2,7 @@ import { configureStore, getDefaultMiddleware } from '@reduxjs/toolkit'
 import createSagaMiddleware from 'redux-saga'
 import counterReducer from '../features/counter/counterSlice'
 import catReducer from '../features/cat/catSlice'
-import { watcherSaga } from '../sagas/handlers/cat';
+import { watcherSaga } from '../sagas/rootSaga';
 
 const sagaMiddleware = createSagaMiddleware()
 
