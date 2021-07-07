@@ -12,9 +12,9 @@ export default function Counter() {
     <section>
       <h2 className={styles.title}>Counter</h2>
       <div>
-        <Button onClick={() => dispatch(decremented())} />
+        <Button onClick={() => dispatch(decremented())}>-</Button>
         <span className={styles.count}>{count}</span>
-        <Button onClick={() => dispatch(incremented())} />
+        <Button onClick={() => dispatch(incremented())}>+</Button>
       </div>
     </section>
   )
