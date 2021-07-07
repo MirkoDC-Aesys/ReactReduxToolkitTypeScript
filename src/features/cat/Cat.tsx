@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Button from '../../components/Button'
 import styles from './Cat.module.css'
 import { useGetCatQuery } from './catSlice'
