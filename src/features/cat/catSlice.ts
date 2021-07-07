@@ -18,7 +18,7 @@ const catSlice = createSlice({
         getCatLoading: (state) => {
             state.value = 'https://media1.tenor.com/images/8f7a28e62f8242b264c8a39ba8bea261/tenor.gif?itemid=15922897'
         },
-        getCatSagaFulfilled: (state, action) => {
+        getCatSagaFulfilled: (state, action: PayloadAction<string>) => {
             state.value = action.payload
         },
         getCatRejected: (state) => {
