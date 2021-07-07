@@ -1,5 +1,4 @@
 import { configureStore, getDefaultMiddleware } from '@reduxjs/toolkit'
-import createSagaMiddleware from 'redux-saga'
 import counterReducer from '../features/counter/counterSlice'
 
 export const store = configureStore({
