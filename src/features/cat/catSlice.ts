@@ -19,7 +19,7 @@ export const catAPI = createApi({
     }),
     endpoints(builder) {
         return {
-            getCat: builder.query<Cat, void>({
+            getCat: builder.query<Cat[], void>({
                 query: () => `/images/search`
             })
         }
