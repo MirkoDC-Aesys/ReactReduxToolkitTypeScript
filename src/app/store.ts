@@ -1,10 +1,14 @@
 import { configureStore, getDefaultMiddleware } from '@reduxjs/toolkit'
 import counterReducer from '../features/counter/counterSlice'
+import { catAPI } from '../features/cat/catSlice'
 
 export const store = configureStore({
   reducer: {
-    counter: counterReducer
+    counter: counterReducer,
+    [catAPI.reducerPath]: catAPI.reducer,
   },
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware().concat(catAPI.middleware),
 })
 
 export type AppDispatch = typeof store.dispatch
