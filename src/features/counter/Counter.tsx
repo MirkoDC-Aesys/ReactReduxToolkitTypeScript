@@ -2,6 +2,7 @@ import React from 'react'
 import styles from './Counter.module.css'
 import { useAppDispatch, useAppSelector } from '../../app/hooks'
 import { incremented, decremented } from './counterSlice'
+import Button from '../../components/Button'
 
 export default function Counter() {
   const count = useAppSelector(state => state.counter.value)
@@ -11,9 +12,9 @@ export default function Counter() {
     <section>
       <h2 className={styles.title}>Counter</h2>
       <div>
-        <button onClick={() => dispatch(decremented())}>-</button>
+        <Button onClick={() => dispatch(decremented())} />
         <span className={styles.count}>{count}</span>
-        <button onClick={() => dispatch(incremented())}>+</button>
+        <Button onClick={() => dispatch(incremented())} />
       </div>
     </section>
   )
